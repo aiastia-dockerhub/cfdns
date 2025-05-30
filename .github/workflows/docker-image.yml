@@ -43,6 +43,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: Dockerfile-dev
+          file: Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: aiastia/cloudflare-dnsswitch
