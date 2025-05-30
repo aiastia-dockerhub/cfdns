@@ -32,13 +32,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       -
-        name: down
-        run: |
-         wget -O yt-dlp https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
-         wget --mirror -O libssl1.1_1.1.0g-2ubuntu4_amd64.deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
- 
-        
-      -
         name: Build and push
         uses: docker/build-push-action@v3
         with:
